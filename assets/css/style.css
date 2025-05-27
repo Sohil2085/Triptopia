@@ -11,6 +11,9 @@ h5,
 h6{
     margin: 0;
 }
+ff-roboto{font-family: roboto;}
+ff-raleway{font-family: raleway;}
+ff-manrope{font-family: manrope;}
 .btn-nav{
     background: rgba(250, 115, 53, 1);
 }
@@ -31,19 +34,25 @@ h6{
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     background: rgba(255, 255, 255, 0.75);
+    position: relative;
+    z-index: 2;
 }
+
 .hero-section {
-  position: relative;
-  background-image: url('../images/background_image.png'); /* ✅ Correct relative path */
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  min-height: 726px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 5%;
+    position: relative;
+    background-image: url('../images/background_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    border-radius: 24px;
+    z-index: 1;
+    background-position: bottom center;
 }
+/* .px-42{
+  padding: 0 42px;
+  margin: 0 auto;
+} */
 
 
 /* .hero-padding{
@@ -51,6 +60,7 @@ h6{
 } */
 
 .bg-travel{
+    font-family: manrope;
     background: rgba(254, 250, 23, 1);
     line-height: 26px;
     text-align: center;
@@ -82,6 +92,9 @@ h6{
 .btn-discover{
     background-color: rgba(250, 115, 53, 1) !important;
 }
+.gap-80{
+    gap: 80px !important;
+}
 .know_us_h2{
     font-size: 48px;
     line-height: 58px;
@@ -99,6 +112,9 @@ h6{
     line-height: 29px;
     vertical-align: middle;
 }
+/* .gap-122{
+    gap : 122px;
+} */
 .icon-text{
     font-size: 18px;
     line-height: 24px;
@@ -157,9 +173,85 @@ h6{
   color: white;
   margin-top: 1rem;
 }
-.profile-img {
-  width: 100%;
-  height: 100%;
+
+.rounded-icon-wrapper {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  object-fit: cover;
+  position: relative;
+}
+
+/* Background color examples */
+.bg-blue { background-color: #cfdffe; }
+.bg-green { background-color: #c9fbd2; }
+.bg-pink { background-color: #fde2e4; }
+.bg-purple { background-color: #e4d2f9; }
+
+.text-orange{
+    color: #FA7335;
+}
+.fs-48{font-size: 48px;}
+.fs-14{font-size: 14px;}
+.icon-bottom-left {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.feature-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.center-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+.tour .container h1{
+    color: rgba(1, 46, 65, 1);
+    line-height: 58px;
+    vertical-align: middle;
+}
+
+@media (max-width: 991px) {
+    .feature-col {
+    text-align: center;
+    }
+    .feature-box {
+    justify-content: center;
+    }
+}
+@media (max-width : 992px){
+    .temp{
+        position: absolute;
+        top: 100%;
+        background: white;
+        width: 100%;
+        padding: 0 20px;
+        
+    }
+}
+@media (max-width: 768px) {
+    .hero-h1{font-size: 41px;}
+    .custom_row{
+        display: flex;
+        row-gap: 10px;
+        text-align: center;
+    }
+    .feature-box{align-items: center;}
+}
+@media (max-width: 992px) {
+    .custom_row{
+        display: flex;
+        row-gap: 10px;
+        text-align: center;
+    }
+    .know_us_h2{font-size: 40px;}
+    .feature-box{align-items: center;}
 }
