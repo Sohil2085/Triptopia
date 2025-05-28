@@ -11,9 +11,27 @@ h5,
 h6{
     margin: 0;
 }
-ff-roboto{font-family: roboto;}
-ff-raleway{font-family: raleway;}
-ff-manrope{font-family: manrope;}
+figure, .figure, .picture{
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+}
+.picture > img,
+.picture > iframe,
+.picture > video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.ff-roboto{font-family: roboto;}
+.ff-raleway{font-family: raleway;}
+.ff-manrope{font-family: manrope;}
 .btn-nav{
     background: rgba(250, 115, 53, 1);
 }
@@ -69,6 +87,7 @@ ff-manrope{font-family: manrope;}
     margin-bottom: 20px;
 }
 .hero-h1{
+    max-width: 474px;
     color: black;
     font-family: Raleway;
     font-weight: 800;
@@ -96,15 +115,20 @@ ff-manrope{font-family: manrope;}
     gap: 80px !important;
 }
 .know_us_h2{
+    margin: 0 auto;
+    max-width: 514px;
     font-size: 48px;
     line-height: 58px;
     vertical-align: middle;
 }
 .know_us_p{
+    margin: 0 auto;
+    max-width: 578px;
     line-height: 24px;
     vertical-align: middle;
 }
 .know_us_strong{
+    margin: 0 auto;
     padding: 24px 92px 53px 32px;
     background: rgba(222, 242, 240, 1);
 }
@@ -121,6 +145,10 @@ ff-manrope{font-family: manrope;}
     vertical-align: middle;
     color: rgba(52, 88, 103, 1);
 }
+.temp_par{
+    margin: 0 auto;
+    max-width: 647px;
+}
 .destination_p{
     font-family: Raleway;
     font-size: 14px;
@@ -135,21 +163,55 @@ ff-manrope{font-family: manrope;}
     vertical-align: middle;
 }
 .card-body{padding: 0;}
-.team_h1{
-    font-size: 48px;
-    line-height: 58px;
-    vertical-align: middle;
+
+
+
+.team_heading{
+    max-width: 591px;
+    margin: 0 auto;
 }
-.team-card {
-  background-color: #002D3E; /* deep navy */
-  border-radius: 0.5rem;
-  padding-top: 4.5rem;
-  padding-bottom: 2rem;
-  padding-inline: 1rem;
-  width: 240px;
-  position: relative;
+.meet_team .members .member_block{
+    position: relative;
+    padding: 24px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+ 
+.meet_team .members .member_block::after{
+    width: 100%;
+    height: 49%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #012E41;
+    content: '';
+    z-index: -1;
+    border-radius: 8px;
+}
+.team_h3{
+    font-family: roboto;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 41px;
+}
+.team_p{
+    font-family: roboto;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
+
+
+
+
+
+
+
+.mt-120{margin-top: 120px;}
 .img-wrapper {
   position: absolute;
   top: -50px;
@@ -218,7 +280,15 @@ ff-manrope{font-family: manrope;}
     line-height: 58px;
     vertical-align: middle;
 }
-
+.pt-60{padding-top: 60px;}
+.custom_button{
+    line-height: 24px;
+    vertical-align: middle;
+}
+.location span{line-height: 24px;vertical-align: middle;}
+.mt-30{margin-top: 30px;}
+.mb-30{margin-bottom: 30px;}
+.fs-14{font-size: 14px;}
 @media (max-width: 991px) {
     .feature-col {
     text-align: center;
@@ -234,8 +304,9 @@ ff-manrope{font-family: manrope;}
         background: white;
         width: 100%;
         padding: 0 20px;
-        
     }
+    
+    .team_card::after{width: 100%; height: 55%;}
 }
 @media (max-width: 768px) {
     .hero-h1{font-size: 41px;}
@@ -245,6 +316,12 @@ ff-manrope{font-family: manrope;}
         text-align: center;
     }
     .feature-box{align-items: center;}
+    .team_card::after{width: 100%; height: 55%;}
+    .custom_tour_h3{font-size: 22px;}
+    .custom_tour_span{font-size: 12px;}
+    .fs-14{font-size: 12px;}
+    .custom_rupee{font-size: 18px;}
+    .price{flex-direction: column;gap: 10px;}
 }
 @media (max-width: 992px) {
     .custom_row{
@@ -254,4 +331,10 @@ ff-manrope{font-family: manrope;}
     }
     .know_us_h2{font-size: 40px;}
     .feature-box{align-items: center;}
+}
+@media (max-width: 575px){
+    .member_pf img{height: 150px; width: 150px;}
+    .member_block{padding: 51px 20px 23px !important;}
+    .custom_hero_img{flex-direction: column;width: 150px;}
+    .custom_tour_h3{font-size: 18px;}
 }
