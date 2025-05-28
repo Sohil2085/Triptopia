@@ -322,6 +322,7 @@ figure, .figure, .picture{
     .fs-14{font-size: 12px;}
     .custom_rupee{font-size: 18px;}
     .price{flex-direction: column;gap: 10px;}
+    .custom_trip_btn{padding-top: 10px;}
 }
 @media (max-width: 992px) {
     .custom_row{
