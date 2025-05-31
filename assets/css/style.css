@@ -262,6 +262,9 @@ figure, .figure, .picture{
   border-radius: 50%;
   overflow: hidden;
 }
+.know_center_img{
+    padding-top: 79%;
+}
 
 .img-wrapper img {
   width: 100%;
